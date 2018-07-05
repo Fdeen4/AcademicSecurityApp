@@ -21,9 +21,17 @@ public class MainController {
     @Autowired
     AppUserRepository users;
 
-    @RequestMapping("/") public String home(){
+    @RequestMapping("/") public String index(){
         return "index";
     }
+    @RequestMapping("/student") public String dasbboard(){
+        return "student";
+    }
+    @RequestMapping("/teacher") public String list(){
+        return "teacher";
+    }
+
+
 
     @PostConstruct
     public void loadData()
